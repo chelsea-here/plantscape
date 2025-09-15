@@ -1,0 +1,143 @@
+@media only screen and (min-width: 64rem) {}
+    #sbs-683 .cs-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #sbs-683 .cs-image-group {
+        font-size: min(1.2vw, 1em);
+        flex: none;
+    }
+    #sbs-683 .cs-graphic {
+        width: 61.4375em;
+        height: auto;
+        display: block;
+        position: absolute;
+        bottom: 10.3125em;
+        right: -2em;
+        z-index: -1;
+    }
+
+
+ /* stylequiz.css */
+
+body {
+    background-color: #6a3721bb;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1;
+    padding: 1;
+  }
+  
+  .picker-container {
+    padding: 20px 20px;
+    max-width: 1000px;
+    margin: 2 auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: #112111;
+    margin-bottom: 20px;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    justify-items: center;
+  }
+  
+  .card {
+    background-color: #f6ecec;
+    border-radius: 10px;
+    box-shadow:  4px 10px rgba(67, 64, 64, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    width: 200%;
+    max-width: 280px;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+  
+  .card h3 {
+    margin: 35px 0;
+    font-size: 2.1rem;
+    color: #610404;
+  }
+  
+  .details {
+    background-color: #c39b9b;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .details h2 {
+    color: #6d343d;
+    font-size: 3rem;
+  }
+  
+  .details p {
+    margin: 10px 0;
+    font-size: 1.8rem;
+    color: #473e3e;
+  }
+  
+  button {
+    background-color: #7e6b6d;
+    color: rgb(73, 16, 16);
+    padding: 10px 26px;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #a5898b;
+  }
+  
+ /*  Plants list.css */
+
+
+  plant-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    list-style-type: none;
+    border-bottom: 1px solid #251919;
+}
+
+plant-list img {
+  width: 10px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+}
+
+plant-name {
+  font-weight: bold;
+  font-style: italic;
+  color: #1e0505;
+  font-size: 2rem;
+  display: block;
+
+}

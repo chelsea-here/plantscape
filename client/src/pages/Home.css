@@ -1,0 +1,101 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+
+.home-container {
+  font-family: 'Urbanist', sans-serif;
+  color: #1a1a1a;
+  padding: 3rem 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #064420, #0b6b35);
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {.hero h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3rem; 
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  
+}
+
+/* Steps List */
+ol {
+  list-style: none;
+  counter-reset: step;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0;
+}
+
+ol li {
+  background: rgba(239, 237, 237, 0.75);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+ol li::before {
+  counter-increment: step;
+  content: "0" counter(step);
+  position: absolute;
+  top: 1.25rem;
+  left: 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  background-color: #064420;
+  color: rgb(202, 202, 202);
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+ol li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.08);
+}
+
+ol li p {
+  margin-top: 0.5rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+a {
+  color: #0b6b35;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #064420;
+  text-decoration: underline;
+}
+ol li {
+    text-align: center;
+    align-items: center;
+  }
+  

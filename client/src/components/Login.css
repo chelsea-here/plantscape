@@ -1,0 +1,140 @@
+/* login.css */
+
+/* General container for the login form */
+.login-container {
+    width: 90%;
+    max-width: 350px; /* Made a bit smaller from 400px */
+    margin: 15vh auto; /* Centers horizontally and pushes it down from the top for better vertical centering */
+    padding: 30px;
+    background-color: #ffffff; /* White background for the form box */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center text within the container */
+}
+
+/* Heading styles */
+.login-container h2 {
+    font-size: 2em; /* Larger heading for prominence */
+    color: #064420; /* Dark green, matching your header/nav text */
+    margin-bottom: 20px;
+    letter-spacing: -0.025em; /* Consistent with h2 in main.css */
+    font-weight: 600; /* Consistent with h2 in main.css */
+}
+
+/* Form styling */
+.login-container form {
+    display: flex;
+    flex-direction: column; /* Stack labels and inputs vertically */
+    gap: 15px; /* Space between form elements */
+    align-items: stretch; /* Stretch items to fill container width */
+    margin-bottom: 0; /* Remove bottom margin from form as buttons are now outside */
+}
+
+/* Label styles */
+.login-container label {
+    display: flex; /* Make label and input align */
+    flex-direction: column; /* Stack label text above input */
+    text-align: left; /* Align label text to the left */
+    font-size: 1.1em;
+    color: #474747; /* Consistent text color */
+    font-weight: 500;
+}
+
+/* Input field styles */
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%; /* Full width within the form */
+    padding: 12px 15px;
+    margin-top: 5px; /* Space between label text and input field */
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-size: 1em;
+    color: #474747;
+    background-color: #fcfcfc; /* Slightly off-white background for inputs */
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus {
+    border-color: #0b6b35; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 2px rgba(11, 107, 53, 0.2); /* Subtle focus glow */
+}
+
+/* Button styles (applies to both Login and Register buttons) */
+.login-container button {
+    background-color: #064420; /* Dark green button background */
+    color: #ffffff; /* White text */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    /* margin-top: 10px; Removed from here as it's now in button-group */
+    flex-grow: 1; /* Allow buttons to grow and fill space in flex container */
+}
+
+.login-container button:hover {
+    background-color: #0b6b35; /* Lighter green on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.login-container button:active {
+    transform: translateY(0); /* Press down effect */
+}
+
+/* Error message style */
+.login-container .error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+/* Link style for "Register" button if it's a link */
+.login-container .register-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 1em;
+    color: #154a33;
+    text-decoration: none;
+    border-bottom: dotted 1px #154a33;
+    transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.login-container .register-link:hover {
+    color: #0b6b35;
+    border-bottom-color: transparent;
+}
+
+/* UPDATED STYLES FOR BUTTON GROUP */
+.login-container .button-group {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically align items in the center */
+    justify-content: space-between; /* Space out items */
+    gap: 15px; /* Space between buttons and 'or' */
+    margin-top: 25px; /* Increased space above the button group from the form */
+}
+
+/* NEW STYLES FOR OR SEPARATOR */
+.login-container .or-separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #a0a0a0; /* Lighter color for the separator text */
+    font-size: 0.9em; /* Smaller font size for "or" */
+    font-weight: 500;
+    white-space: nowrap; /* Prevent "or" from wrapping */
+    flex-grow: 0; /* Don't let it grow */
+    flex-shrink: 0; /* Don't let it shrink */
+}
+
+.login-container .or-separator::before,
+.login-container .or-separator::after {
+    content: '';
+    flex-grow: 1;
+    height: 1px; /* Thickness of the line */
+    background-color: #e0e0e0; /* Color of the line */
+    margin: 0 10px; /* Space between line and "or" text */
+}

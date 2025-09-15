@@ -1,0 +1,92 @@
+/* register.css */
+
+/* General container for the registration form, similar to login-container */
+.register-container {
+    width: 90%;
+    max-width: 350px; /* Consistent with login form size */
+    margin: 15vh auto; /* Centers horizontally and vertically */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading styles */
+.register-container h1 {
+    font-size: 2em; /* Consistent with login h2 */
+    color: #064420;
+    margin-bottom: 20px;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+}
+
+/* Form styling */
+.register-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+    margin-bottom: 0;
+}
+
+/* Label styles */
+.register-container label {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 1.1em;
+    color: #474747;
+    font-weight: 500;
+}
+
+/* Input field styles */
+.register-container input[type="text"],
+.register-container input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 5px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #474747;
+    background-color: #fcfcfc;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.register-container input[type="text"]:focus,
+.register-container input[type="password"]:focus {
+    border-color: #0b6b35;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(11, 107, 53, 0.2);
+}
+
+/* Button styles */
+.register-container button {
+    background-color: #064420;
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 10px; /* Space above the button */
+}
+
+.register-container button:hover {
+    background-color: #0b6b35;
+    transform: translateY(-2px);
+}
+
+.register-container button:active {
+    transform: translateY(0);
+}
+
+/* Error message style */
+.register-container .error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}

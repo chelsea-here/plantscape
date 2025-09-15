@@ -1,0 +1,92 @@
+/* components/templateSelector.css */
+
+/* Import the same font used across your app */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap");
+
+.template-selector-grid {
+  font-family: "Urbanist", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(33%, 1fr)
+  ); /* Flexible grid for cards */
+  gap: 1.5rem; /* Spacing between cards */
+  margin-top: 1.5rem;
+  padding: 0.5rem; /* Small internal padding if needed */
+  justify-content: center; /* Center cards if they don't fill the row */
+}
+
+.template-card {
+  background: #e7f3e7; /* Light green background, similar to plantContainer */
+  border: 1px solid #c0d8c0; /* Subtle border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 1.2rem; /* Internal padding for card content */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Soft shadow */
+  cursor: pointer; /* Indicate it's clickable */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+  text-align: center; /* Center text within the card */
+  display: flex; /* Use flexbox to align content */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.template-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); /* More prominent shadow on hover */
+}
+
+/* Style for selected template */
+.template-card.selected {
+  border-color: #0b6b35; /* Darker green border for selected card */
+  background-color: #dff0d8; /* Slightly darker green background for selected */
+  box-shadow: 0 0 0 3px #0b6b35; /* A subtle ring around the selected card */
+  transform: scale(1.02); /* Slightly larger for emphasis */
+}
+
+.template-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #064420; /* Dark green for template name */
+  margin-top: 0;
+  margin-bottom: 0.5rem; /* Space below title */
+}
+
+.template-card p {
+  font-size: 0.95rem;
+  color: #2d4a2d; /* Darker green for details */
+  margin-bottom: 0.3rem; /* Small spacing between detail lines */
+  line-height: 1.4;
+}
+
+.template-card p:last-child {
+  margin-bottom: 0; /* No bottom margin for the last paragraph */
+}
+/* MODIFIED: Image styling for images within template cards */
+.template-card img {
+  max-width: 100%; /* Ensure image is responsive within its container */
+  height: 250px; /* INCREASED HEIGHT significantly for a larger image */
+  object-fit: cover; /* Crop image to fit, maintaining aspect ratio */
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .template-card {
+    padding: 1rem;
+  }
+  .template-card h3 {
+    font-size: 1.2rem;
+  }
+  .template-card p {
+    font-size: 0.9rem;
+  }
+  /* Optional: Adjust image height for smaller screens if needed */
+  .template-card img {
+    height: 180px; /* Slightly smaller height on mobile for better fit */
+  }
+}

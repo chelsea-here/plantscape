@@ -1,0 +1,62 @@
+/* pages/PlantDetails.css */
+
+/* Import the same font used in Plants.css */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap");
+
+.container {
+  font-family: "Urbanist", sans-serif;
+  max-width: 700px; /* Slightly narrower than plants-container for focus */
+  margin: 3rem auto;
+  padding: 2rem; /* Generous padding */
+  color: #222;
+  background: #fafafa; /* Light background similar to plants-container */
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06); /* Consistent shadow */
+  text-align: center; /* Center content */
+}
+
+.container h2 {
+  font-size: 2.2rem; /* Slightly smaller than main h1, but prominent */
+  font-weight: 700;
+  color: #064420; /* Dark green for main title */
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0b6b35; /* Consistent underline style */
+  padding-bottom: 0.5rem;
+}
+
+.container p {
+  font-weight: 500;
+  font-size: 1.1rem; /* Slightly smaller than intro p in Plants.css */
+  line-height: 1.6;
+  margin-bottom: 0.8rem; /* Spacing between paragraphs */
+  color: #2d4a2d; /* Darker green for text */
+}
+
+.container img {
+  max-width: 100%; /* Ensure image is responsive */
+  height: auto;
+  max-height: 400px; /* Limit max height */
+  object-fit: cover; /* Cover the area, crop if necessary */
+  border-radius: 10px; /* Consistent rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly more prominent shadow for main image */
+  margin-bottom: 1.5rem; /* Space below image */
+  display: block; /* Ensures margin auto works for centering */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Specific style for the toxicity message */
+.container p span {
+  font-style: normal; /* Override italic if needed for the span */
+}
+
+.container p span[style*="font-style: italic"] {
+  color: #c0392b; /* Reddish color for toxic warning */
+  font-weight: 600;
+}
+
+/* Basic styling for loading/error messages */
+.container p:first-of-type {
+  margin-top: 1rem;
+}

@@ -1,0 +1,210 @@
+/* MyGardenBed.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&display=swap");
+
+/* General container for the entire page */
+.my-garden-bed-container {
+  font-family: "Urbanist", sans-serif;
+  max-width: 1200px; /* Increased max-width to accommodate side-by-side layout */
+  margin: 3rem auto;
+  padding: 1.5rem 2.5rem;
+  color: #222;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column; /* Always stack content vertically */
+  gap: 2rem; /* Space between header, content, and actions */
+  align-items: center; /* Center content horizontally within the container */
+}
+
+/* Header section styles */
+.garden-bed-header {
+  width: 100%; /* Ensure header takes full width */
+}
+
+.garden-bed-header h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #064420;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.garden-bed-header p {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #444;
+}
+
+/* Main content area: Canvas and Placed Plants */
+.garden-bed-content {
+  display: flex;
+  flex-direction: column; /* Explicitly stack canvas and plant list */
+  gap: 2rem; /* Space between canvas and plant list */
+  align-items: center; /* Center items horizontally */
+  width: 100%; /* Take full width of parent container */
+}
+
+/* Wrapper for the GardenCanvas */
+.garden-canvas-wrapper {
+  width: 100%; /* Take full width of its parent (.garden-bed-content) */
+  max-width: 720px; /* Limit canvas width on very large screens for better appearance */
+  background-color: #f0f0f0; /* Light background for canvas area */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem; /* Padding around the canvas */
+  display: flex;
+  justify-content: center; /* Center the canvas itself horizontally */
+  align-items: center;
+}
+
+/* Section for displaying placed plants */
+.placed-plants-section {
+  width: 100%; /* Take full width of its parent (.garden-bed-content) */
+  max-width: 900px; /* Max width for the plant list for better readability */
+  background: #e7f3e7; /* Light green background */
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.07);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the h2 and the grid */
+}
+
+.placed-plants-section h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #0b6b35;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0b6b35;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  width: 100%; /* Ensure heading takes full width for centering */
+}
+
+.placed-plants-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(150px, 1fr)
+  ); /* Responsive grid for plant cards */
+  gap: 1rem; /* Space between plant cards */
+  justify-content: center; /* Centers the grid items within their tracks */
+  width: 100%; /* Ensure grid takes full width of its parent flex container */
+  max-width: 100%; /* Ensure it doesn't overflow */
+}
+
+.placed-plant-card {
+  background: #ffffff;
+  border: 1px solid #d4e9d4;
+  border-radius: 8px;
+  padding: 0.8rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.placed-plant-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.plant-image-thumbnail {
+  width: 100%; /* Make image fill card width */
+  max-height: 120px; /* Limit image height */
+  object-fit: cover; /* Cover the area, cropping if necessary */
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.placed-plant-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #064420;
+  margin: 0.5rem 0;
+}
+
+.placed-plant-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.2rem 0;
+  line-height: 1.3;
+}
+
+.no-plants-message {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  padding: 1rem;
+}
+
+/* Action Buttons */
+.garden-bed-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  width: 100%; /* Ensure buttons take full width to center effectively */
+}
+
+.action-button {
+  padding: 0.8rem 1.5rem;
+  background-color: #0b6b35;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none; /* For button element */
+  cursor: pointer; /* For button element */
+  white-space: nowrap; /* Prevent text from wrapping */
+  min-width: 140px; /* Increased min-width for consistent sizing */
+  display: flex; /* This is the primary display property */
+  align-items: center;
+  justify-content: center;
+  /* NEW ADDITIONS */
+  min-height: 2.6rem; /* Explicitly set min-height based on padding + font-size */
+  line-height: normal; /* Normalize line-height to prevent extra vertical space */
+  box-sizing: border-box; /* Ensure padding is included in the total width/height */
+}
+
+.action-button:hover {
+  background-color: #064420;
+  transform: translateY(-2px);
+}
+
+/* Responsive Adjustments (Simplified as default is now column) */
+@media (max-width: 992px) {
+  .my-garden-bed-container {
+    max-width: 90%;
+    padding: 1rem 1.5rem;
+  }
+  .garden-canvas-wrapper,
+  .placed-plants-section {
+    max-width: 100%; /* Ensure they don't exceed container width */
+  }
+}
+
+@media (max-width: 600px) {
+  .garden-bed-header h1 {
+    font-size: 2rem;
+  }
+  .garden-bed-header p {
+    font-size: 1rem;
+  }
+  .placed-plants-section h2 {
+    font-size: 1.5rem;
+  }
+  .placed-plants-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+  .action-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

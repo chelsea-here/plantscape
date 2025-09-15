@@ -1,0 +1,349 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap");
+
+li {
+  list-style-type: none;
+}
+
+.plants-container {
+  font-family: "Urbanist", sans-serif;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 1rem 2rem;
+  color: #222;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.plants-container h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #064420;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.plants-container p {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.plantContainer {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #e7f3e7;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.07);
+}
+
+.plantContainer h3 {
+  margin: 0;
+  font-weight: 600;
+  color: #0b6b35;
+  font-size: 1.25rem;
+}
+
+.plants-container ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.plants-container ul li {
+  flex: 1 1 150px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #064420;
+  text-align: center;
+}
+
+.plants-container ul img {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 0.4rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.plants-container h2,
+.plants-container h3 {
+  color: #0b6b35;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0b6b35;
+  padding-bottom: 0.3rem;
+}
+
+.plants-container ul:not(.plants-list) {
+  list-style: disc inside;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2d4a2d;
+}
+
+/* Footer */
+/* .plants-container footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #ccc;
+  margin-top: 3rem;
+} */
+
+/* Plants.css from Gemini with modal styling... Please review!*/
+/* Plants.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap");
+
+li {
+  list-style-type: none;
+}
+
+.plants-container {
+  font-family: "Urbanist", sans-serif;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 1rem 2rem;
+  color: #222;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.plants-container h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #064420;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.plants-container p {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Grid for displaying plants */
+.plants-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px;
+  max-width: 1200px; /* Adjusted max-width for the grid to give more space */
+  margin: 20px auto;
+}
+
+/* Individual plant container within the grid */
+.plantContainer {
+  margin-bottom: 1rem; /* This might be redundant with grid gap, but keeping for now */
+  padding: 2rem;
+  background: #e7f3e7;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.07);
+  display: flex; /* Added flex for centering content within container */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer; /* Indicate it's clickable */
+  transition: transform 0.2s ease-in-out;
+}
+
+.plantContainer:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.plant-image {
+  width: 100%; /* Original width from your CSS */
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 10px; /* Original border-radius from your CSS */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 0.4rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.plants-container ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.plants-container ul li {
+  flex: 1 1 150px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #064420;
+  text-align: center;
+}
+
+/* This rule seems to target images directly inside ul, possibly for a different layout.
+   Keeping it, but plant-image class is more specific for grid images. */
+.plants-container ul img {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 0.4rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.plants-container h2,
+.plants-container h3 {
+  color: #0b6b35;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0b6b35;
+  padding-bottom: 0.3rem;
+}
+
+/* Moved this rule AFTER .plants-container h2, .plants-container h3 for correct specificity order */
+.plantContainer h3 {
+  width: 100%;
+  margin: 0; /* This will now correctly override the more general h3 margins */
+  padding: 0;
+  font-weight: 600;
+  color: #0b6b35;
+  font-size: 1.25rem;
+}
+/* NEW: Style for hr inside plantContainer */
+.plantContainer hr {
+  border: none; /* Remove default border */
+
+  /* Extend to the edge of the padding */
+  width: calc(100% + 3rem); /* 100% + 2 * 1.5rem padding */
+  /* UPDATED: Reduced bottom margin from 1rem to 0.5rem */
+  margin: 0.5rem -1rem 0.5rem -1rem; /* Top margin, negative side margins, bottom margin */
+}
+.plants-container ul:not(.plants-list) {
+  list-style: disc inside;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2d4a2d;
+}
+
+/* Footer */
+.plants-container footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #ccc;
+  margin-top: 3rem;
+}
+
+/* --- MODAL STYLES (ADDED/COMBINED) --- */
+
+/* The Modal (background) */
+.modal {
+  position: fixed; /* Position fixed to cover the entire viewport */
+  z-index: 1000; /* High z-index to appear on top of everything */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if content is too long */
+  background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity for backdrop */
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto; /* Auto margin for centering (works with flexbox too) */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 80%; /* Could be a percentage or max-width */
+  max-width: 500px; /* Max width for larger screens */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatemodal; /* Apply animation */
+  animation-duration: 0.4s;
+  position: relative; /* Needed for positioning close button if added */
+  text-align: center;
+}
+
+.modal-image {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 300px; /* Limit height for modal image */
+  object-fit: contain; /* Ensure entire image is visible */
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.modal-content p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.modal-content button {
+  background-color: #0b6b35; /* Using a green from your existing palette */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #064420; /* Darker green on hover */
+}
+
+/* Animation for modal appearance */
+@keyframes animatemodal {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); /* Slide down slightly */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .plants-grid {
+    grid-template-columns: 1fr; /* Stack plants on small screens */
+  }
+  .modal-content {
+    width: 95%; /* Wider modal on small screens */
+  }
+}

@@ -1,0 +1,37 @@
+#footer {
+    padding: 4em 0 8em 0;
+}
+
+    #footer a {
+        color: inherit;
+        border-bottom-color: rgba(71, 71, 71, 0.25);
+    }
+
+        #footer a:hover {
+            color: #114e1a;
+            border-bottom-color: transparent;
+        }
+
+    #footer .container {
+        margin-bottom: 4em;
+    }
+
+    #footer .icons {
+        text-align: center;
+        margin: 0;
+    }
+
+        #footer .icons a {
+            color: #999;
+        }
+
+            #footer .icons a:hover {
+                color: #474747;
+            }
+
+    #footer .copyright {
+        color: #999;
+        margin-top: 1.5em;
+        text-align: center;
+        font-size: 0.9em;
+    }

@@ -1,0 +1,186 @@
+/* admin.css */
+
+/* General container for the admin page */
+.admin-container {
+    width: 90%;
+    max-width: 800px; /* Slightly wider to accommodate the form fields */
+    margin: 40px auto; /* Centers horizontally and adds vertical spacing */
+    padding: 30px;
+    background-color: #ffffff; /* White background for the main content box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center text within the container */
+    color: #474747; /* Consistent text color */
+    font-family: 'Source Sans Pro', sans-serif; /* Consistent font */
+}
+
+/* Heading styles */
+.admin-container h1,
+.admin-container h2 {
+    color: #064420; /* Dark green headings, consistent with app branding */
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: -0.025em; /* Consistent with other headings */
+}
+
+.admin-container h1 {
+    font-size: 2.2em; /* Larger for main title */
+}
+
+.admin-container h2 {
+    font-size: 1.8em; /* Slightly smaller for section titles */
+    margin-top: 30px; /* Space above section headings */
+    margin-bottom: 15px;
+}
+
+.admin-container p {
+    margin-bottom: 1em; /* Standard paragraph spacing */
+}
+
+/* Error message styling */
+.admin-container .error-message {
+    color: red; /* Red for error messages */
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Link styling (e.g., "Login as Admin" link) */
+.admin-container .admin-link {
+    color: #154a33; /* Darker green for links */
+    text-decoration: none;
+    border-bottom: dotted 1px; /* Dotted underline */
+    transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.admin-container .admin-link:hover {
+    color: #0b6b35; /* Lighter green on hover */
+    border-bottom-color: transparent; /* Remove dotted line on hover */
+}
+
+/* Form Styling: Create New Plant Form */
+.create-plant-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for inputs on larger screens */
+    gap: 20px; /* Space between grid items */
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #e0e0e0; /* Light border around the form */
+    border-radius: 8px;
+    background-color: #fcfcfc; /* Slightly off-white background for the form area */
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 600px) {
+    .create-plant-form {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    .create-plant-form .checkbox-label,
+    .create-plant-form .numeric-inputs,
+    .create-plant-form button[type="submit"] {
+        grid-column: span 1; /* Adjust span for single column layout */
+    }
+}
+
+/* Label styling within the form */
+.create-plant-form label {
+    display: flex;
+    flex-direction: column; /* Stack label text above input */
+    text-align: left;
+    font-size: 1em;
+    color: #474747;
+    font-weight: 500;
+}
+
+/* Input field styles within the form */
+.create-plant-form input[type="text"],
+.create-plant-form input[type="number"] {
+    width: 100%; /* Full width within its grid column */
+    padding: 10px 12px;
+    margin-top: 5px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    font-size: 0.95em;
+    color: #474747;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.create-plant-form input[type="text"]:focus,
+.create-plant-form input[type="number"]:focus {
+    border-color: #0b6b35; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 2px rgba(11, 107, 53, 0.2); /* Subtle focus glow */
+}
+
+/* Checkbox specific styling */
+.create-plant-form .checkbox-label {
+    flex-direction: row; /* Align checkbox and text horizontally */
+    align-items: center;
+    gap: 8px; /* Space between checkbox and text */
+    grid-column: span 2; /* Make checkbox span both columns on larger screens */
+    justify-content: flex-start; /* Align to the left */
+}
+
+.create-plant-form input[type="checkbox"] {
+    width: auto; /* Don't stretch checkbox */
+    margin-top: 0;
+}
+
+/* Container for numeric inputs (height/width min/max) */
+.create-plant-form .numeric-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns within this sub-grid */
+    gap: 15px;
+    grid-column: span 2; /* Span both main columns */
+}
+
+/* Submit button styling */
+.create-plant-form button[type="submit"] {
+    grid-column: span 2; /* Make button span both columns */
+    background-color: #064420; /* Dark green button background */
+    color: #ffffff; /* White text */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+.create-plant-form button[type="submit"]:hover {
+    background-color: #0b6b35; /* Lighter green on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.create-plant-form button[type="submit"]:active {
+    transform: translateY(0); /* Press down effect */
+}
+
+/* Divider line */
+.divider {
+    border: 0;
+    border-top: solid 1px #e0e0e0; /* Light gray line */
+    margin: 40px 0; /* Spacing above and below */
+}
+
+/* Existing Plants List Styling */
+.plant-list {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.plant-item {
+    background-color: #f9f9f9; /* Slightly off-white background for list items */
+    border: 1px solid #eee; /* Light border */
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between; /* Space out name and ID */
+    align-items: center;
+    font-size: 0.95em;
+}

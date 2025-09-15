@@ -1,0 +1,90 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Urbanist", sans-serif;
+  background-color: #eafae5;
+}
+
+.quiz-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.quiz-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f0fdf0;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  width: 90%;
+}
+
+.quiz-question {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #064420;
+}
+
+.quiz-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.quiz-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.quiz-buttons button {
+  background-color: #064420;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.quiz-buttons button:hover {
+  background-color: #0b6b35;
+}
+
+/* new */
+.quiz-end-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quiz-end-text {
+  font-size: 1.25rem; /* Equivalent to text-xl */
+  color: #4b5563; /* Equivalent to text-gray-700 */
+}
+
+.last-answer-text {
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.last-answer-value {
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.loading-text {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 700; /* font-bold */
+  color: #4b5563; /* text-gray-700 */
+}

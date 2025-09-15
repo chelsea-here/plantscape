@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap');
+
+.myprofile-container {
+  font-family: 'Urbanist', sans-serif;
+  max-width: 720px;
+  margin: 3rem auto;
+  padding: 1.5rem 2rem;
+  color: #222;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+.myprofile-container h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #064420;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.myprofile-container h2 {
+  font-size: 2rem;
+  color: #0b6b35;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0b6b35;
+  padding-bottom: 0.25rem;
+}
+
+.myprofile-container h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Links */
+.myprofile-container a {
+  color: #0b6b35;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.myprofile-container a:hover,
+.myprofile-container a:focus {
+  color: #064420;
+  text-decoration: underline;
+}
+
+/* Project list */
+.myprofile-container ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.myprofile-container ul li {
+  background: #e6f0e6;
+  margin-bottom: 1rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.07);
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .myprofile-container {
+    margin: 1.5rem 1rem;
+    padding: 1rem 1.25rem;
+  }
+}
+

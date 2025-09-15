@@ -1,0 +1,155 @@
+/* pages/myProjectDetails.css */
+
+/* Import the same font used across your app */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap");
+
+.container {
+  font-family: "Urbanist", sans-serif;
+  max-width: 800px; /* Consistent width for content pages */
+  margin: 3rem auto;
+  padding: 2rem;
+  color: #222;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  text-align: center; /* Center main headings and general text */
+}
+
+.container h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #064420; /* Dark green for main title */
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #0b6b35; /* Consistent underline */
+}
+
+.container h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #0b6b35; /* Medium green for subheadings */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.container p {
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  color: #2d4a2d; /* Darker green for text */
+  text-align: left; /* Align paragraph text to the left for readability */
+  padding: 0 1rem; /* Add some horizontal padding for paragraphs */
+}
+
+/* Specific styling for the Project ID and Owner paragraphs */
+.container p:first-of-type, /* Project ID */
+.container p:nth-of-type(2) {
+  /* Owner */
+  text-align: center; /* Keep these centered */
+  font-size: 1rem;
+  color: #555;
+  padding: 0; /* Remove padding for these specific centered paragraphs */
+}
+
+/* List of Garden Beds */
+.container ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.container ul li {
+  background: #e7f3e7; /* Light green background for list items */
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.container ul li:hover {
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.container ul li a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0b6b35; /* Dark green for links */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.container ul li a:hover {
+  color: #064420;
+  text-decoration: underline;
+}
+
+/* Buttons and Links at the bottom */
+.container .action-buttons {
+  display: flex;
+  flex-direction: column; /* NEW: Stack items vertically */
+  align-items: center; /* NEW: Center items horizontally within the flex container */
+  gap: 1rem; /* NEW: Vertical space between stacked items */
+  margin-top: 2rem;
+}
+
+.container .action-buttons a,
+.container .action-buttons button {
+  background-color: #0b6b35;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  /* NEW: Ensure they take up their own line and have a max-width for better centering */
+  display: block;
+  width: auto; /* Allow natural width */
+  max-width: 250px; /* Limit max width for better appearance */
+  margin-left: auto; /* Center block element */
+  margin-right: auto; /* Center block element */
+}
+
+.container .action-buttons a:hover,
+.container .action-buttons button:hover {
+  background-color: #064420;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading/Error messages */
+.container .message-box {
+  padding: 1rem;
+  font-style: italic;
+  color: #555;
+  text-align: center; /* Ensure text is centered */
+  margin-bottom: 1.5rem; /* NEW: Add spacing below message box */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+  .container {
+    margin: 1.5rem auto;
+    padding: 1rem;
+  }
+  .container h2 {
+    font-size: 2rem;
+  }
+  .container h3 {
+    font-size: 1.5rem;
+  }
+  .container p {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+  .container .action-buttons {
+    gap: 0.8rem; /* Slightly less gap on smaller screens */
+  }
+}

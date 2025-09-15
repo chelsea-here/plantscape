@@ -1,0 +1,207 @@
+/* pages/gardenBedForm.css */
+
+/* Import the same font used across your app */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap");
+
+.container {
+  font-family: "Urbanist", sans-serif;
+  max-width: 700px; /* A suitable width for the form */
+  margin: 3rem auto;
+  padding: 2rem;
+  color: #222;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.container h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #064420; /* Dark green */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #0b6b35; /* Medium green */
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.container h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0b6b35;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.container p {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #2d4a2d; /* Darker green for text */
+  text-align: center;
+}
+
+/* Form styling */
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Space between form sections */
+}
+
+.container form > div {
+  background-color: #e7f3e7; /* Light green background for sections */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.07);
+}
+
+.container label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #064420;
+  font-size: 1.1rem;
+}
+
+.container input[type="text"],
+.container input[type="number"],
+.container select {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 10px;
+  margin-bottom: 0.5rem; /* Space below input */
+  border: 1px solid #c0d8c0; /* Light green border */
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.container input[type="text"]:focus,
+.container input[type="number"]:focus,
+.container select:focus {
+  border-color: #0b6b35; /* Darker green on focus */
+  box-shadow: 0 0 0 2px rgba(11, 107, 53, 0.2);
+  outline: none;
+}
+
+/* Placeholder style */
+.container input::placeholder {
+  color: #999;
+  opacity: 1; /* Firefox default is lower */
+}
+
+/* Helper text for dimensions */
+.container .dimension-helper-text {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: -0.3rem; /* Pull up closer to input */
+  margin-bottom: 1rem;
+  text-align: left; /* Align helper text to the left */
+}
+
+/* Mode toggle buttons (Template vs Custom) */
+.container .mode-toggle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.container .mode-toggle-buttons button {
+  background-color: #c0d8c0; /* Light green for inactive */
+  color: #064420;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container .mode-toggle-buttons button:hover {
+  background-color: #a7c4a7;
+}
+
+.container .mode-toggle-buttons button.active {
+  background-color: #0b6b35; /* Darker green for active button */
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Submit button */
+.container button[type="submit"] {
+  background-color: #0b6b35;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  align-self: center; /* Center the button if form is flex column */
+}
+
+.container button[type="submit"]:hover {
+  background-color: #064420;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.container button[type="submit"]:disabled {
+  background-color: #a7c4a7;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Success and Error messages */
+.container .success-message {
+  color: #1a7d3c; /* Green for success */
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.container .error-message {
+  color: #c0392b; /* Red for error */
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+    margin: 1.5rem auto;
+    padding: 1rem;
+  }
+  .container h1 {
+    font-size: 2rem;
+  }
+  .container h2 {
+    font-size: 1.6rem;
+  }
+  .container h3 {
+    font-size: 1.2rem;
+  }
+  .container .mode-toggle-buttons {
+    flex-direction: column; /* Stack buttons on small screens */
+    gap: 0.8rem;
+  }
+  .container input[type="text"],
+  .container input[type="number"],
+  .container select {
+    width: calc(100% - 20px); /* Adjust width for smaller padding */
+  }
+}

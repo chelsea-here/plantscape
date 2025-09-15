@@ -1,0 +1,129 @@
+/* pages/myprojects.css */
+
+/* Import the same font used across your app */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600&display=swap");
+
+.container {
+  font-family: "Urbanist", sans-serif;
+  max-width: 800px; /* A good width for a list of projects */
+  margin: 3rem auto;
+  padding: 2rem;
+  color: #222;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  text-align: center; /* Center the main content */
+}
+
+.container h1,
+.container h2 {
+  font-size: 2.4rem; /* Prominent heading */
+  font-weight: 700;
+  color: #064420; /* Dark green */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.container p {
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #2d4a2d; /* Darker green for text */
+}
+
+.container a {
+  color: #0b6b35; /* Link color */
+  text-decoration: none; /* No underline by default */
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+}
+
+.container a:hover {
+  color: #064420; /* Darker green on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+.container ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.container ul li {
+  background: #e7f3e7; /* Light green background for list items */
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  transition: transform 0.2s ease-in-out;
+}
+
+.container ul li:hover {
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.container ul li a {
+  font-size: 1.3rem; /* Larger font for project names */
+  font-weight: 600;
+  color: #0b6b35; /* Dark green for project names */
+}
+
+.container button {
+  background-color: #0b6b35; /* Green button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+  background-color: #064420; /* Darker green on hover */
+}
+
+/* Specific styling for the "Create New Project" link/button */
+.container h3 a {
+  display: inline-block; /* Allows padding and margin */
+  background-color: #4caf50; /* A distinct green for this action */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.container h3 a:hover {
+  background-color: #45a049;
+  text-decoration: none; /* Ensure no underline on hover for this button-like link */
+}
+
+/* Styling for loading/error messages */
+.container > div {
+  /* Targets direct children div for loading/error */
+  padding: 1rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+  .container {
+    margin: 1.5rem auto;
+    padding: 1rem;
+  }
+  .container h2 {
+    font-size: 2rem;
+  }
+  .container ul li a {
+    font-size: 1.1rem;
+  }
+}
