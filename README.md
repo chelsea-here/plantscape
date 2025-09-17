@@ -66,6 +66,6 @@ See GitHub Projects
 
 ---
 
-## 📌 Licensing Note: This project is part of my professional portfolio — code is All Rights Reserved.  
+## 📌 Licensing Note: This project is part of my professional portfolio — while other small demo projects may use MIT licensing for educational purposes - this code is All Rights Reserved.  
 
 
