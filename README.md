@@ -66,18 +66,6 @@ See GitHub Projects
 
 ---
 
-## 📄 Licensing
+## 📌 Licensing Note: This project is part of my professional portfolio — code is All Rights Reserved.  
 
-This project is provided as part of my professional portfolio.
-
-- **PlantScape (Flagship Project):**  
-  All Rights Reserved — showcased for demonstration purposes only.  
-  Please do not copy, reuse, or redistribute without permission.  
-
-- **Demo & Practice Projects:**  
-  Licensed under the MIT License — open for learning and reuse.  
-
-- **Documentation & Design Assets:**  
-  Licensed under Creative Commons BY-NC (Attribution–NonCommercial).  
-  Shareable with attribution for non-commercial use only.  
 
